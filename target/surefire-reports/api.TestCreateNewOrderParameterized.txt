@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: api.TestCreateNewOrderParameterized
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 5.241 s <<< FAILURE! - in api.TestCreateNewOrderParameterized
+CreateOrderAuthTest[0:CreateOrder(61c0c5a71d1f82001bdaaa6f;200)](api.TestCreateNewOrderParameterized)  Time elapsed: 0.481 s  <<< ERROR!
+java.lang.NullPointerException
+	at api.TestCreateNewOrderParameterized.CreateOrderAuthTest(TestCreateNewOrderParameterized.java:38)
+
+CreateOrderAuthTest[0:CreateOrder(61c0c5a71d1f82001bdaaa6f;200)](api.TestCreateNewOrderParameterized)  Time elapsed: 0.485 s  <<< ERROR!
+java.lang.NullPointerException
+	at api.TestCreateNewOrderParameterized.deleteUser(TestCreateNewOrderParameterized.java:44)
+

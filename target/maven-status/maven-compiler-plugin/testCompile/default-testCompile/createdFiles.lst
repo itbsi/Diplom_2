@@ -1,0 +1,7 @@
+api/TestAlreadyRegisteredUser.class
+api/TestCreateNewOrder.class
+api/TestRegisterParameterized.class
+api/TestChangeExistingUserData.class
+api/TestCreateNewOrderParameterized.class
+api/TestGetExistingUserOrders.class
+api/TestLogin.class

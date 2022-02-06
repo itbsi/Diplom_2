@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: api.TestCreateNewOrder
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.806 s <<< FAILURE! - in api.TestCreateNewOrder
+CreateOrderNoAuthTest(api.TestCreateNewOrder)  Time elapsed: 0.798 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at api.TestCreateNewOrder.CreateOrderNoAuthTest(TestCreateNewOrder.java:14)
+

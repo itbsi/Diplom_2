@@ -1,0 +1,12 @@
+api/LoginCredentials.class
+api/UserOrders.class
+api/RestAssuredSpec.class
+api/Login.class
+api/DeleteExistingUser.class
+api/ChangeExistingUserData.class
+api/UserDataCredentialsLessName.class
+api/UserCredentials.class
+api/Register.class
+api/GetExistingUserData.class
+api/CreateNewOrder.class
+api/UserData.class

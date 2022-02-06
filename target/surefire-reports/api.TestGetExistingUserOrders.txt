@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: api.TestGetExistingUserOrders
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.841 s <<< FAILURE! - in api.TestGetExistingUserOrders
+getAllUserOrdersAuth(api.TestGetExistingUserOrders)  Time elapsed: 1.389 s  <<< FAILURE!
+java.lang.AssertionError
+	at api.TestGetExistingUserOrders.getAllUserOrdersAuth(TestGetExistingUserOrders.java:27)
+
