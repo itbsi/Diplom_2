@@ -1,7 +1,6 @@
 package api;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -42,12 +41,7 @@ public class TestCreateNewOrderParameterized extends RestAssuredSpec {
     public void deleteUser() {
         if (register.response.body().path("success").equals(false)) {
             createNewOrder.response.path("message").equals("Internal Server Error.");
-            return;
         }
-        Assert.assertNotNull(createNewOrder.response.path("name"));
-        createNewOrder.response.path("success").equals(true);
-        Assert.assertNotNull(createNewOrder.response.path("order.number"));
-        register.response.then().assertThat().statusCode(200);
         deleteExistingUser.delete(register.response.path("accessToken").toString().substring(7));
     }
 }

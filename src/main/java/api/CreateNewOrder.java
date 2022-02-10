@@ -8,7 +8,7 @@ public class CreateNewOrder extends RestAssuredSpec {
 
     Response response;
 
-    @Step
+    @Step("Создание заказа")
     public Response createOrder(String ingredientName, String token) {
         String json = "{\"ingredients\": [\"" + ingredientName + "\" ]}";
         return response = given()
@@ -19,7 +19,7 @@ public class CreateNewOrder extends RestAssuredSpec {
                 .post(ORDER_PATH);
     }
 
-    @Step
+    @Step("Создание заказа без авторизации")
     public Response createOrderNoAuth(String ingredientName) {
         String json = "{\"ingredients\": [\"" + ingredientName + "\" ]}";
         return response = given()

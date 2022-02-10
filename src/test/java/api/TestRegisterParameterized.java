@@ -1,5 +1,6 @@
 package api;
 import io.qameta.allure.junit4.DisplayName;
+import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -23,6 +24,7 @@ public class TestRegisterParameterized {
         this.expected = expected;
     }
 
+
     @Parameterized.Parameters(name = "{index}:Registration({0};{1};{2};{3})")
     public static Object[][] Registration() {
         return new Object[][]{
@@ -42,15 +44,21 @@ public class TestRegisterParameterized {
         if (register.response.body().path("success").equals(false)) {
             register.response.path("message").equals("Email, password and name are required fields");
             register.response.then().assertThat().statusCode(403);
-            return;
         } else {
             register.response.then().assertThat().statusCode(200);
             register.response.path("user.email").equals(userData.email);
             register.response.path("user.name").equals(userData.name);
             assertNotNull(register.response.path("accessToken"));
             assertNotNull(register.response.path("refreshToken"));
-            deleteExistingUser.delete(register.response.path("accessToken").toString().substring(7));
         }
     }
-}
 
+    @After
+    public void clear() {
+        if (register.response.body().path("success").equals(false)){
+            return;
+        }
+        register.response.then().assertThat().statusCode(200);
+        deleteExistingUser.delete(register.response.path("accessToken").toString().substring(7));
+    }
+}
